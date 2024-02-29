@@ -7,8 +7,10 @@ export class ServicesNotification implements INotificationService {
     const socket = io("http://localhost:3005"); 
 
     socket.on("connect", () => {
+      console.log(payload);
+      
       console.log("Connected to server");
-      socket.emit("chat message", payload);
+      socket.emit("message", payload);
     });
 
     socket.on("disconnect", () => {
