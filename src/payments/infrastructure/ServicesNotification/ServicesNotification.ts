@@ -4,7 +4,7 @@ import { INotificationService } from "../../app/services/INotificationService";
 
 export class ServicesNotification implements INotificationService {
   sendMessage(payload: Payment): string {
-    const socket = io("http://localhost:3005"); 
+    const socket = io("https://api-ws-server.onrender.com/"); 
 
     socket.on("connect", () => {
       console.log(payload);
