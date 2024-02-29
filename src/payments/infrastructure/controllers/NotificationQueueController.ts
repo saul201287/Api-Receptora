@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { NotificationPaymentUseCase } from "../../app/NotifiationPaymentsUseCase";
 
-
 export class NotificationQueueController{
   constructor(readonly payload: NotificationPaymentUseCase) {}
   async run(req: Request, res: Response) {
@@ -15,6 +14,7 @@ export class NotificationQueueController{
         data.price
       );
       if (payload) {
+        console.log(payload);
         
         res.status(200).send(payload);
       } else {

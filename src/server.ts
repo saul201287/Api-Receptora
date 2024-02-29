@@ -4,7 +4,7 @@ import { Signale } from "signale";
 import * as dotenv from "dotenv";
 import helmet from "helmet";
 import cors from "cors"
-import { paymentRouter } from "./infrastructure/PaymentsRouter";
+import { paymentRouter } from "./payments/infrastructure/PaymentsRouter";
 
 const app = express();
 
